@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="shop.js"></script>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="shopangular.css">
+<body ng-app="money" ng-controller="myCtrl" >
+
+<div >
+
+<img src="https://www.doortodoorshines.com/img/shoe-logo.svg" style="width:25%;margin-left:5%;" >
+<SPAN id="two">SHOE.<SPAN id="three">COM</SPAN></SPAN>
+
+<SPAN ng-bind="total" id="one"></SPAN>
+<img src="https://image.freepik.com/free-icon/shopping-cart-of-checkered-design_318-50865.png" style="width:5%;float:right;background-color:grey;" >
+<button style="margin-left:20%;" ng-click="home()">Home</button>
+<button ng-click="cart()">Cart</button>
+</div>
+
+<div ng-repeat="item in items"  id="div2" class="panel panel-default" ng-show="nikhil">
+
+<div>
+{{item.name}}
+</div>
+
+<img ng-src ="{{item.image}}" style="height:50%;width:60%;padding-left:10%"/>
+
+
+
+
+<input type="number" ng-model="king" id="textbox" />
+<div id = "test">
+{{item.price}}
+
+
+</div>
+<button   ng-hide="hiddenbtn[$index]"  ng-click="add($index,item.price,king)"    >add</button> </br>
+<button   ng-show="hiddenbtn[$index]"  ng-click="del($index,item.price,king)"  >remove</button> </br>
+</div>
+
+
+
+<div ng-show="nikhe" id="cartpage">
+<span id="cartpage">Total Items:</span><h1 ng-bind="nik"></h1>
+</div>
+
+
+</body>
+</html>
+
